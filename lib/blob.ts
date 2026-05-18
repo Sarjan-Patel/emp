@@ -20,7 +20,7 @@ export async function storeSubmission(
   const key = `submissions/${yyyy}/${mm}/${dd}/${submission.id}.json`;
 
   await put(key, JSON.stringify(submission, null, 2), {
-    access: "public",
+    access: "private",
     addRandomSuffix: false,
     contentType: "application/json",
   });
