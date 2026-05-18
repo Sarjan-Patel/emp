@@ -892,6 +892,35 @@ body {
   font-size: 12px; color: var(--wf-ink-60); line-height: 1.5;
 }
 
+/* Process steps (Capabilities page) */
+.wireframe-root .wf-process {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.wireframe-root .wf-process-step {
+  display: grid;
+  grid-template-columns: 60px 1fr 200px;
+  gap: 20px; align-items: start;
+  padding: 20px;
+  background: var(--wf-surface);
+  border: 1px solid var(--wf-line);
+  border-radius: 6px;
+  position: relative;
+}
+.wireframe-root .wf-process-step + .wf-process-step::before {
+  content: ""; position: absolute; top: -10px; left: 38px;
+  width: 2px; height: 10px;
+  background: var(--wf-accent);
+}
+.wireframe-root .wf-process-num {
+  font-family: var(--ff-mono), ui-monospace, monospace;
+  font-size: 22px; font-weight: 700; color: var(--wf-accent);
+  letter-spacing: 1px;
+  padding-top: 4px;
+}
+.wireframe-root .wf-process-content { min-width: 0; }
+.wireframe-root .wf-process-visual .wf-greybox { height: 100%; }
+
 /* --- Mobile --- */
 @media (max-width: 700px) {
   .wireframe-root .wf-main { padding: 32px 16px 48px; }
@@ -923,4 +952,8 @@ body {
   }
   .wireframe-root .wf-timeline-item { padding: 8px 0 8px 12px; }
   .wireframe-root .wf-timeline-dot { top: 14px; left: -26px; }
+  .wireframe-root .wf-process-step {
+    grid-template-columns: 40px 1fr;
+  }
+  .wireframe-root .wf-process-visual { display: none; }
 }
