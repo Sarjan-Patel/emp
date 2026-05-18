@@ -933,6 +933,63 @@ body {
 .wireframe-root .wf-cert-logo .wf-greybox { border-radius: 6px; }
 .wireframe-root .wf-cert-body { min-width: 0; }
 
+/* RFQ upload zone */
+.wireframe-root .wf-upload {
+  margin-top: 16px;
+  display: flex; align-items: center; gap: 14px;
+  padding: 18px;
+  background: var(--wf-surface);
+  border: 2px dashed var(--wf-line);
+  border-radius: 6px;
+}
+.wireframe-root .wf-upload-icon {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--wf-accent-soft); color: var(--wf-accent);
+  border-radius: 50%;
+  font-size: 18px; font-weight: 700;
+}
+.wireframe-root .wf-upload-text {
+  display: flex; flex-direction: column; gap: 2px;
+  font-size: 12px;
+}
+.wireframe-root .wf-upload-text strong { color: var(--wf-ink); font-size: 13px; }
+.wireframe-root .wf-upload-text span { color: var(--wf-ink-60); }
+
+/* RFQ + Contact: keep two-column above 700px (covered by .wf-grid-2 already) */
+.wireframe-root .wf-rfq-grid > .wf-card { align-self: start; }
+.wireframe-root .wf-contact-grid > * { align-self: start; }
+
+/* Named contacts (Contact page) */
+.wireframe-root .wf-named-list {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.wireframe-root .wf-named-item {
+  padding: 14px;
+  border: 1px solid var(--wf-line-soft);
+  border-radius: 5px;
+  background: var(--wf-paper);
+}
+.wireframe-root .wf-named-role {
+  font-family: var(--ff-mono), ui-monospace, monospace;
+  font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--wf-accent);
+  margin-bottom: 4px;
+}
+.wireframe-root .wf-named-name {
+  font-weight: 700; font-size: 14px; color: var(--wf-ink);
+}
+.wireframe-root .wf-named-email {
+  font-family: var(--ff-mono), ui-monospace, monospace;
+  font-size: 12px; color: var(--wf-accent);
+  margin-top: 2px;
+}
+.wireframe-root .wf-named-note {
+  font-size: 12px; color: var(--wf-ink-60);
+  margin-top: 6px;
+}
+
 /* --- Mobile --- */
 @media (max-width: 700px) {
   .wireframe-root .wf-main { padding: 32px 16px 48px; }
