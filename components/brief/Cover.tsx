@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Cover() {
   return (
     <div className="cover">
@@ -10,6 +12,17 @@ export function Cover() {
         and mapped out every section your new website needs. Below are the
         decisions that will shape the final product. Pick your preferences —
         we&apos;ll handle the rest.
+      </p>
+      <Link
+        href="/wireframe"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="cover-cta"
+      >
+        Preview the proposed empmags.com →
+      </Link>
+      <p className="cover-cta-note">
+        Opens our recommended direction in a new tab — your answers stay put.
       </p>
       <div className="cover-meta">
         <span>
