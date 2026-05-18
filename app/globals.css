@@ -921,6 +921,18 @@ body {
 .wireframe-root .wf-process-content { min-width: 0; }
 .wireframe-root .wf-process-visual .wf-greybox { height: 100%; }
 
+/* Cert row (Certifications page) */
+.wireframe-root .wf-cert-row {
+  display: grid; grid-template-columns: 140px 1fr; gap: 20px;
+  align-items: start;
+  padding: 18px;
+  background: var(--wf-surface);
+  border: 1px solid var(--wf-line);
+  border-radius: 6px;
+}
+.wireframe-root .wf-cert-logo .wf-greybox { border-radius: 6px; }
+.wireframe-root .wf-cert-body { min-width: 0; }
+
 /* --- Mobile --- */
 @media (max-width: 700px) {
   .wireframe-root .wf-main { padding: 32px 16px 48px; }
@@ -956,4 +968,5 @@ body {
     grid-template-columns: 40px 1fr;
   }
   .wireframe-root .wf-process-visual { display: none; }
+  .wireframe-root .wf-cert-row { grid-template-columns: 1fr; }
 }
