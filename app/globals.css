@@ -669,6 +669,116 @@ body {
 .wireframe-root .wf-stack { display: flex; flex-direction: column; gap: 16px; }
 .wireframe-root .wf-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
 
+/* --- Page-element vocabulary (shared across section pages) --- */
+.wireframe-root .wf-hero {
+  padding: 24px 0 16px;
+}
+.wireframe-root .wf-trust-strip {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px;
+}
+.wireframe-root .wf-trust-item .wf-greybox { border-radius: 6px; }
+.wireframe-root .wf-textlink {
+  font-family: var(--ff-mono), ui-monospace, monospace;
+  font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--wf-accent);
+  border-bottom: 1px solid var(--wf-accent);
+  padding-bottom: 2px;
+}
+.wireframe-root .wf-textlink:hover { text-decoration: none; color: var(--wf-ink); border-color: var(--wf-ink); }
+.wireframe-root .wf-card-title {
+  font-weight: 700; font-size: 14px;
+  margin: 10px 0 4px; color: var(--wf-ink);
+}
+.wireframe-root .wf-card-body {
+  font-size: 13px; line-height: 1.55; color: var(--wf-ink-60);
+}
+.wireframe-root .wf-card-headline {
+  font-family: var(--ff-display), Georgia, serif;
+  font-size: 22px; line-height: 1.25; margin: 8px 0; color: var(--wf-ink);
+  font-weight: 700;
+}
+.wireframe-root .wf-card-meta {
+  font-family: var(--ff-mono), ui-monospace, monospace;
+  font-size: 11px; color: var(--wf-ink-60);
+  margin-top: 10px;
+  border-top: 1px dashed var(--wf-line-soft);
+  padding-top: 8px;
+}
+
+/* Process flow (capabilities, home teaser) */
+.wireframe-root .wf-flow {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; gap: 8px;
+  overflow-x: auto;
+}
+.wireframe-root .wf-flow-step {
+  flex: 1 1 0; min-width: 110px;
+  background: var(--wf-surface);
+  border: 1px solid var(--wf-line);
+  border-radius: 6px;
+  padding: 14px 12px;
+  display: flex; flex-direction: column; gap: 4px;
+  position: relative;
+}
+.wireframe-root .wf-flow-step + .wf-flow-step::before {
+  content: "›";
+  position: absolute; left: -12px; top: 50%; transform: translateY(-50%);
+  color: var(--wf-line); font-size: 18px;
+}
+.wireframe-root .wf-flow-num {
+  font-family: var(--ff-mono), ui-monospace, monospace;
+  font-size: 10px; color: var(--wf-accent);
+  letter-spacing: 1px;
+}
+.wireframe-root .wf-flow-label {
+  font-size: 13px; font-weight: 600; color: var(--wf-ink);
+}
+
+/* Catalog part cards (used on home + catalog) */
+.wireframe-root .wf-part-head {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 10px;
+}
+.wireframe-root .wf-part-num {
+  font-family: var(--ff-mono), ui-monospace, monospace;
+  font-size: 14px; font-weight: 700; color: var(--wf-ink);
+}
+.wireframe-root .wf-part-family {
+  font-family: var(--ff-mono), ui-monospace, monospace;
+  font-size: 10px; letter-spacing: 1px;
+  padding: 2px 8px;
+  background: var(--wf-accent-soft); color: var(--wf-accent);
+  border-radius: 3px;
+}
+
+/* Stat strip */
+.wireframe-root .wf-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+  padding: 24px;
+  background: var(--wf-surface);
+  border: 1px solid var(--wf-line);
+  border-radius: 6px;
+}
+.wireframe-root .wf-stat-num {
+  font-family: var(--ff-display), Georgia, serif;
+  font-size: 28px; font-weight: 700; color: var(--wf-ink);
+  line-height: 1.1;
+}
+.wireframe-root .wf-stat-label {
+  font-family: var(--ff-mono), ui-monospace, monospace;
+  font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--wf-ink-60);
+  margin-top: 4px;
+}
+
+/* CTA band */
+.wireframe-root .wf-cta-band {
+  background: var(--wf-accent-soft);
+  border: 1px solid var(--wf-line);
+  border-radius: 6px;
+  padding: 28px;
+}
+
 /* --- Mobile --- */
 @media (max-width: 700px) {
   .wireframe-root .wf-main { padding: 32px 16px 48px; }
@@ -683,4 +793,10 @@ body {
   .wireframe-root .wf-grid-3,
   .wireframe-root .wf-grid-4,
   .wireframe-root .wf-grid-5 { grid-template-columns: 1fr; }
+  .wireframe-root .wf-trust-strip { grid-template-columns: repeat(2, 1fr); }
+  .wireframe-root .wf-stats { grid-template-columns: repeat(2, 1fr); padding: 20px; }
+  .wireframe-root .wf-stat-num { font-size: 22px; }
+  .wireframe-root .wf-flow { padding-bottom: 8px; }
+  .wireframe-root .wf-flow-step { min-width: 130px; }
+  .wireframe-root .wf-card-headline { font-size: 18px; }
 }
